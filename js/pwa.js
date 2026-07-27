@@ -29,7 +29,7 @@
     message.id = "pwa-installed-message";
     message.className = "pwa-installed-message";
     message.setAttribute("role", "status");
-    message.textContent = "✅ Orione 2000 è stata installata con successo.";
+    message.textContent = "✅ Campo Ex Velodromo è stata installata con successo.";
     document.body.appendChild(message);
 
     requestAnimationFrame(() => message.classList.add("visible"));
@@ -96,7 +96,7 @@
 
   window.addEventListener("load", async () => {
     try {
-      const registration = await navigator.serviceWorker.register("./service-worker.js?v=5.2.0complete1", { scope: "./" });
+      const registration = await navigator.serviceWorker.register("./service-worker.js?v=5.2.1release1", { scope: "./" });
 
       const showUpdate = worker => {
         waitingWorker = worker;

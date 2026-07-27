@@ -1,14 +1,14 @@
 {
-  "name": "Orione 2000 Prenotazioni",
-  "short_name": "Orione 2000",
-  "description": "Prenotazione e gestione dei campi sportivi Orione 2000. Versione 5.2.0.",
+  "name": "Campo Ex Velodromo",
+  "short_name": "Ex Velodromo",
+  "description": "Prenotazione campo Ex Velodromo.",
   "id": "./index.html",
-  "start_url": "./index.html?source=pwa&v=5.2.0",
+  "start_url": "./index.html?source=pwa&v=5.2.1release1",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#f4f7f5",
-  "theme_color": "#145637",
+  "theme_color": "#075c32",
   "lang": "it-IT",
   "categories": [
     "sports",
@@ -37,7 +37,7 @@
   ],
   "shortcuts": [
     {
-      "name": "Prenota un campo",
+      "name": "Prenotazione campo",
       "short_name": "Prenota",
       "url": "./index.html",
       "icons": [

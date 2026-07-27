@@ -1,4 +1,4 @@
-const CACHE_NAME = "orione-2000-pwa-v5.2.0-complete";
+const CACHE_NAME = "campo-ex-velodromo-v5.2.1-release";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -6,14 +6,14 @@ const APP_SHELL = [
   "./privacy.html",
   "./offline.html",
   "./manifest.webmanifest",
-  "./css/style.css?v=5.2.0complete1",
-  "./js/config.js?v=5.2.0complete1",
-  "./js/weather.js?v=5.2.0complete1",
-  "./js/supabase-client.js?v=5.2.0complete1",
-  "./js/cliente.js?v=5.2.0complete1",
-  "./js/admin.js?v=5.2.0complete1",
-  "./js/footer.js?v=5.2.0complete1",
-  "./js/pwa.js?v=5.2.0complete1",
+  "./css/style.css?v=5.2.1release1",
+  "./js/config.js?v=5.2.1release1",
+  "./js/weather.js?v=5.2.1release1",
+  "./js/supabase-client.js?v=5.2.1release1",
+  "./js/cliente.js?v=5.2.1release1",
+  "./js/admin.js?v=5.2.1release1",
+  "./js/footer.js?v=5.2.1release1",
+  "./js/pwa.js?v=5.2.1release1",
   "./assets/gf-logo.png",
   "./assets/icon-192.png",
   "./assets/icon-512.png",

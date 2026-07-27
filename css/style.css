@@ -759,12 +759,10 @@ input:invalid:not(:placeholder-shown) { border-color: #d98b84; }
 #messaggio.success.show { scroll-margin-top: 90px; }
 
 /* BETA 4.0.1 */
-.beta-banner{position:fixed;top:14px;right:14px;z-index:9999;min-width:178px;padding:10px 15px;border-radius:12px;background:#f59e0b;color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.22);text-align:center;font-size:13px;font-weight:800;line-height:1.15}
-.beta-banner small{display:block;margin-top:4px;font-size:11px;letter-spacing:.10em}
 #prenota.booking-completed,#prenota.booking-completed:disabled{background:#6b7280;border-color:#6b7280;color:#fff;opacity:1;cursor:default;line-height:1.25}
 #prenota.booking-completed small{font-size:12px;font-weight:700}
 #messaggio.success.show{scroll-margin-top:90px;border:2px solid #58a978;box-shadow:0 8px 20px rgba(21,115,71,.12)}
-@media(max-width:720px){.beta-banner{top:8px;right:8px;min-width:150px;padding:8px 11px;font-size:11px}.beta-banner small{font-size:10px}}
+@media(max-width:720px){}
 
 
 /* =========================================================
@@ -1009,8 +1007,7 @@ input:invalid:not(:placeholder-shown) { border-color: #d98b84; }
 
 @media (display-mode: standalone) {
   body { padding-top: env(safe-area-inset-top); }
-  .beta-banner { padding-top: max(8px, env(safe-area-inset-top)); }
-}
+  }
 
 @media (max-width: 700px) {
   .header-actions-row {
@@ -1236,13 +1233,25 @@ input:invalid:not(:placeholder-shown) { border-color: #d98b84; }
   justify-content: flex-start;
 }
 
-.beta-banner small {
-  font-weight: 700;
-}
-
 @media (max-width: 700px) {
   .manager-access-row,
   .privacy-back-row {
     width: min(100% - 24px, 1120px);
+  }
+}
+
+
+/* Versione 5.2.1 - descrizione leggibile della data */
+.date-description {
+  margin-top: 7px;
+  min-height: 1.35em;
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: #24513a;
+}
+
+@media (max-width: 600px) {
+  .date-description {
+    font-size: 0.9rem;
   }
 }

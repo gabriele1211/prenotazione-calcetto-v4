@@ -117,7 +117,10 @@ async function restoreBookingDraft() {
 
   restoringBookingDraft = true;
   try {
-    if (draft.data && draft.data >= localTodayIso()) dataInput.value = draft.data;
+    if (draft.data && draft.data >= localTodayIso()) {
+      dataInput.value = draft.data;
+      updateDateDescription();
+    }
 
     if (
       draft.campo &&
@@ -276,6 +279,53 @@ function validateMunicipality(value) {
   return municipalitySelectionConfirmed && italianMunicipalities.has(normalizeSearchText(value));
 }
 
+
+
+function capitalizeFirst(value) {
+  return value ? value.charAt(0).toUpperCase() + value.slice(1) : "";
+}
+
+function isoToLocalDate(isoDate) {
+  const [year, month, day] = String(isoDate || "").split("-").map(Number);
+  if (!year || !month || !day) return null;
+  return new Date(year, month - 1, day);
+}
+
+function dateDiffInDays(fromDate, toDate) {
+  const fromUtc = Date.UTC(fromDate.getFullYear(), fromDate.getMonth(), fromDate.getDate());
+  const toUtc = Date.UTC(toDate.getFullYear(), toDate.getMonth(), toDate.getDate());
+  return Math.round((toUtc - fromUtc) / 86400000);
+}
+
+function updateDateDescription() {
+  const target = $("data-descrizione");
+  if (!target) return;
+
+  const selected = isoToLocalDate(dataInput.value);
+  if (!selected) {
+    target.textContent = "";
+    return;
+  }
+
+  const today = isoToLocalDate(localTodayIso());
+  const difference = dateDiffInDays(today, selected);
+  const dayName = capitalizeFirst(
+    new Intl.DateTimeFormat("it-IT", { weekday: "long" }).format(selected)
+  );
+  const fullDate = new Intl.DateTimeFormat("it-IT", {
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  }).format(selected);
+
+  let relativeLabel = "";
+  if (difference === 0) relativeLabel = "Oggi";
+  else if (difference === 1) relativeLabel = "Domani";
+
+  target.textContent = relativeLabel
+    ? `${relativeLabel} (${dayName}) ${fullDate}`
+    : `${dayName} ${fullDate}`;
+}
 
 function localTodayIso() {
   const now = new Date();
@@ -618,6 +668,7 @@ async function createBooking() {
 }
 
 dataInput.min = localTodayIso(); dataInput.value = localTodayIso();
+updateDateDescription();
 $("documento-data-rilascio").max = localTodayIso();
 $("documento-numero").addEventListener("input", event => { event.target.value = normalizeDocument(event.target.value).slice(0, 9); });
 $("nome").addEventListener("blur", event => {
@@ -626,7 +677,8 @@ $("nome").addEventListener("blur", event => {
 $("telefono").addEventListener("blur", event => {
   event.target.value = formatPhone(event.target.value);
 });
-dataInput.addEventListener("change", loadSlots); campoSelect.addEventListener("change", loadSlots);
+dataInput.addEventListener("change", loadSlots);
+dataInput.addEventListener("change", updateDateDescription); campoSelect.addEventListener("change", loadSlots);
 document.querySelectorAll('input[name="tipo-prenotazione"]').forEach(input => input.addEventListener("change", async () => {
   updateBookingModeUi();
   await loadSlots();

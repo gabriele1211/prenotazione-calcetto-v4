@@ -3,17 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Campo Sportivo Parco Ex Velodromo (BO)</title>
-  <link rel="stylesheet" href="./css/style.css?v=5.2.0complete1">
+  <title>Campo Ex Velodromo — Prenotazione campo</title>
+  <link rel="stylesheet" href="./css/style.css?v=5.2.0release1">
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
   <meta name="theme-color" content="#145637">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Orione 2000">
+  <meta name="apple-mobile-web-app-title" content="Ex Velodromo">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32.png">
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 </head>
 <body>
@@ -24,15 +24,12 @@
 <div id="ios-install-help" class="ios-install-help" hidden>
   Su iPhone: premi <strong>Condividi</strong> e poi <strong>Aggiungi alla schermata Home</strong>.
 </div>
-
-<div class="beta-banner">
-  <div>⚠ VERSIONE DI TEST</div>
-  <small>PWA 5.2.0 BETA</small>
+<small></small>
 </div>
 <header class="site-header public-header">
     <div>
-      <span class="eyebrow">Prenotazioni online</span>
-      <h1>Campo Sportivo Parco Ex Velodromo (BO)</h1>
+      <span class="eyebrow">Prenotazione campo</span>
+      <h1>Campo Ex Velodromo</h1>
       <p>Scegli giorno e orario. La prenotazione viene confermata subito.</p>
     </div>
     <div class="header-actions-row">
@@ -68,7 +65,8 @@
         </div>
 
         <div class="grid two">
-          <label>Data<input id="data" type="date" required></label>
+          <label>Data<input id="data" type="date" required>
+          <div id="data-descrizione" class="date-description" aria-live="polite"></div></label>
           <label>Campo<select id="campo" required></select></label>
         </div>
 
@@ -187,16 +185,16 @@
     </div>
     <div class="footer-signature" aria-label="Firma del progetto">
       <img src="./assets/gf-logo.png" alt="Logo GF" class="gf-logo">
-      <p class="footer-product">Sistema Prenotazione Campi Sportivi</p>
-      <p>Versione <strong data-app-version>5.2.0 PWA Beta</strong></p>
+      <p class="footer-product">Prenotazione campo</p>
+      <p>Versione <strong data-app-version>5.2.0</strong></p>
       <p>© 2026 Gabriele Facchini</p>
     </div>
   </footer>
 
-  <script src="./js/config.js?v=5.2.0complete1"></script>
-  <script src="./js/supabase-client.js?v=5.2.0complete1"></script>
-  <script src="./js/weather.js?v=5.2.0complete1"></script><script src="./js/cliente.js?v=5.2.0complete1"></script>
-  <script src="./js/footer.js?v=5.2.0complete1"></script>
-  <script src="./js/pwa.js?v=5.2.0complete1"></script>
+  <script src="./js/config.js?v=5.2.0release1"></script>
+  <script src="./js/supabase-client.js?v=5.2.0release1"></script>
+  <script src="./js/weather.js?v=5.2.0release1"></script><script src="./js/cliente.js?v=5.2.0release1"></script>
+  <script src="./js/footer.js?v=5.2.0release1"></script>
+  <script src="./js/pwa.js?v=5.2.0release1"></script>
 </body>
 </html>

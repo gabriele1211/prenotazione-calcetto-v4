@@ -177,9 +177,9 @@ tr:nth-child(even) td { background:#f8fafc; }
 <button type="button" onclick="window.opener?.focus(); window.close();">← Torna all’Area gestore</button>
 <button type="button" onclick="window.print()">🖨️ Stampa</button>
 </div>
-<div class="print-header"><div><h1>Centro Sportivo Orione 2000</h1><p class="meta">Sistema prenotazione campi sportivi</p></div><img src="${logoUrl}" alt="GF"></div>
+<div class="print-header"><div><h1>Campo Ex Velodromo</h1><p class="meta">Prenotazione campo</p></div><img src="${logoUrl}" alt="GF"></div>
 ${bodyHtml}
-<div class="print-footer"><span>Documento generato il ${new Date().toLocaleString("it-IT")}</span><span>Versione 5.2.0 PWA Beta</span></div>
+<div class="print-footer"><span>Documento generato il ${new Date().toLocaleString("it-IT")}</span><span>Versione 5.2.1</span></div>
 <script>
 window.addEventListener('load', () => {
   setTimeout(() => {
@@ -826,7 +826,7 @@ async function stampaArchivioCompleto() {
     <button type="button" onclick="window.print()">🖨️ Stampa</button>
   </div>
   <h1>Archivio completo delle prenotazioni</h1>
-  <div class="subtitle">Centro sportivo Orione 2000 · generato ${escapePrintHtml(generatedAt)}</div>
+  <div class="subtitle">Campo Ex Velodromo · generato ${escapePrintHtml(generatedAt)}</div>
 
   <div class="summary">
     <span><strong>Totale:</strong> ${records.length}</span>
