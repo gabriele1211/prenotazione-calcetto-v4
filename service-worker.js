@@ -1,4 +1,4 @@
-const CACHE_NAME = "campo-ex-velodromo-v5.2.1-release";
+const CACHE_NAME = "campo-ex-velodromo-v4.2-update-channel";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -14,6 +14,7 @@ const APP_SHELL = [
   "./js/admin.js?v=5.2.1release1",
   "./js/footer.js?v=5.2.1release1",
   "./js/pwa.js?v=5.2.1release1",
+  "./js/update-manager.js?v=4.2.0",
   "./assets/gf-logo.png",
   "./assets/icon-192.png",
   "./assets/icon-512.png",

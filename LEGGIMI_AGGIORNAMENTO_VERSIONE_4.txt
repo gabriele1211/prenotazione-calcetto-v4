@@ -1,0 +1,26 @@
+CAMPO EX VELODROMO — CANALE VERSIONE 4.2
+
+Questa versione mostra agli utenti un invito professionale a passare
+alla nuova applicazione Versione 5.
+
+LINK IMPOSTATO
+https://gabriele1211.github.io/prenotazione-calcetto-v5/
+
+FUNZIONAMENTO
+- controlla automaticamente il file version.json;
+- confronta la versione locale 4.2.0 con quella pubblicata;
+- mostra il banner solo quando esiste una versione più recente;
+- “Ricordamelo domani” nasconde l'avviso per 24 ore;
+- mandatory=true rende l'avviso non rimandabile;
+- il pulsante apre direttamente la Versione 5.
+
+AGGIORNAMENTI FUTURI
+Per annunciare una nuova versione basta modificare version.json:
+- latest: numero della nuova versione;
+- message: testo dell'avviso;
+- notes: elenco delle novità;
+- url: indirizzo della nuova applicazione;
+- mandatory: true oppure false;
+- remind_after_hours: tempo prima di mostrare nuovamente l'avviso.
+
+Non occorre modificare Supabase o eseguire nuovi file SQL.

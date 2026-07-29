@@ -16,6 +16,35 @@
   <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
 </head>
 <body>
+
+<section id="version-update-banner"
+         class="version-update-banner"
+         role="dialog"
+         aria-labelledby="version-update-title"
+         aria-describedby="version-update-message"
+         hidden>
+  <button id="version-update-close"
+          class="version-update-close"
+          type="button"
+          aria-label="Ricordamelo più tardi">×</button>
+  <div class="version-update-icon" aria-hidden="true">↑</div>
+  <div class="version-update-content">
+    <span class="version-update-eyebrow">Nuova applicazione disponibile</span>
+    <h2 id="version-update-title">È disponibile la nuova versione 5</h2>
+    <p id="version-update-message"></p>
+    <ul id="version-update-notes" class="version-update-notes"></ul>
+    <div class="version-update-actions">
+      <a id="version-update-link"
+         class="version-update-primary"
+         href="#"
+         rel="noopener">Apri la versione 5</a>
+      <button id="version-update-later"
+              class="version-update-secondary"
+              type="button">Ricordamelo domani</button>
+    </div>
+  </div>
+</section>
+
 <div id="pwa-update-box" class="pwa-update-box" hidden>
   <span>È disponibile un aggiornamento dell’app.</span>
   <button id="pwa-update-now" type="button">Aggiorna ora</button>
@@ -130,4 +159,5 @@
   </footer>
 <script src="./js/config.js?v=5.2.1release1"></script><script src="./js/supabase-client.js?v=5.2.1release1"></script><script src="./js/weather.js?v=5.2.1release1"></script><script src="./js/admin.js?v=5.2.1release1"></script><script src="./js/footer.js?v=5.2.1release1"></script>
   <script src="./js/pwa.js?v=5.2.1release1"></script>
+  <script src="./js/update-manager.js?v=4.2.0"></script>
 </body></html>
